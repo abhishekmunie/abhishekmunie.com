@@ -1,0 +1,150 @@
+<!--Section: Blog v.4-->
+<section id="abhishek" class="red">
+  <div class="card text-start">
+    <picture class="card-img">
+      <source type="image/webp" srcset="/assets/webp/officialfiles/banner/abhishek.webp">
+      <source type="image/jpeg" srcset="/assets/images/officialfiles/banner/abhishek.jpg">
+      <img src="/assets/images/officialfiles/banner/abhishek.jpg" alt="" style="width:100%;" />
+    </picture>
+    <div class="card-img-overlay">
+      <h1 class="container-flex h-100 position-relative">
+        <a class="position-absolute bottom-0 start-0 mh-100" routerLink="/abhishek">
+          <picture class="mh-100">
+            <source type="image/webp" srcset="/assets/webp/officialfiles/header/life-and-abhishek.webp">
+            <source type="image/jpeg" srcset="/assets/images/officialfiles/header/life-and-abhishek.png">
+            <img src="/assets/images/officialfiles/header/life-and-abhishek.png" alt="Life &amp; Abhishek" />
+          </picture>
+        </a>
+      </h1>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <!-- Container wrapper -->
+  <div class="row am-nav-section d-none d-lg-flex">
+    <div class="col-md-4">
+      <figure class="text-start text-dark am-message">
+        <h4 class="display-3">Abhishek's Message</h4>
+        <blockquote class="blockquote text-body">
+          <p>
+            <em>
+              This is the place about me. Although, most of it is not complete for now, it will be complete at a
+              correct time &hellip;
+            </em>
+          </p>
+        </blockquote>
+        <figcaption class="blockquote-footer text-end">
+          <cite title="Source Title">Abhishek Munie</cite>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="col-md-8">
+      <nav>
+        <ul class="row text-end">
+          <li class="col-md-3">
+            <a tabindex="1" routerLink="about" routerLinkActive="active">
+              <figure class="bg-image hover-zoom ripple">
+                <picture>
+                  <source type="image/webp" srcset="/assets/webp/officialfiles/feature/about.webp">
+                  <source type="image/jpeg" srcset="/assets/images/officialfiles/feature/about.jpg">
+                  <img src="/assets/images/officialfiles/feature/about.jpg" alt="About" contenteditable="false" />
+                </picture>
+                <figcaption class="card-img-overlay" contenteditable="false">
+                  <div class="container-flex h-100 position-relative">
+                    <strong class="bg-light position-absolute bottom-0 end-0">About</strong>
+                    </div>
+                  </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="col-md-3">
+            <a tabindex="2" routerLink="photos" routerLinkActive="active">
+              <figure class="bg-image hover-zoom ripple">
+                <picture>
+                  <source type="image/webp" srcset="/assets/webp/officialfiles/feature/picturebook.webp">
+                  <source type="image/jpeg" srcset="/assets/images/officialfiles/feature/picturebook.jpg">
+                  <img src="/assets/images/officialfiles/feature/picturebook.jpg" alt="Picture Book"
+                    contenteditable="false" />
+                </picture>
+                <figcaption class="card-img-overlay" contenteditable="false">
+                  <div class="container-flex h-100 position-relative">
+                    <strong class="bg-light position-absolute bottom-0 end-0">Picture Book</strong>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="col-md-3">
+            <a tabindex="3" routerLink="faqs" routerLinkActive="active">
+              <figure class="bg-image hover-zoom ripple">
+                <picture>
+                  <source type="image/webp" srcset="/assets/webp/officialfiles/feature/faq.webp">
+                  <source type="image/jpeg" srcset="/assets/images/officialfiles/feature/faq.jpg">
+                  <img src="/assets/images/officialfiles/feature/faq.jpg" alt="FAQ" contenteditable="false" />
+                </picture>
+                <figcaption class="card-img-overlay" contenteditable="false">
+                  <div class="container-flex h-100 position-relative">
+                  <strong class="bg-light position-absolute bottom-0 end-0">FAQs</strong>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li class="col-md-3">
+            <a tabindex="4" routerLink="links" routerLinkActive="active">
+              <figure class="bg-image hover-zoom ripple">
+                <picture>
+                  <source type="image/webp" srcset="/assets/webp/officialfiles/feature/links.webp">
+                  <source type="image/jpeg" srcset="/assets/images/officialfiles/feature/links.jpg">
+                  <img src="/assets/images/officialfiles/feature/links.jpg" alt="Favourite Links"
+                    contenteditable="false" />
+                </picture>
+                <figcaption class="card-img-overlay" contenteditable="false">
+                  <div class="container-flex h-100 position-relative">
+                    <strong class="bg-light position-absolute bottom-0 end-0">Favourite Links</strong>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand d-block d-lg-none d-xl-none" href="">Life & Abhishek</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        (click)="togglerThirdExample.toggle()"
+        aria-controls="navbarTogglerDemo03"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        id="navbarTogglerDemo03"
+        mdbCollapse
+        #togglerThirdExample="mdbCollapse"
+      >
+        <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a routerLink="about" class="nav-link waves-light" mdbWavesEffect routerLinkActive="active">About</a></li>
+          <li class="nav-item"><a routerLink="faqs" class="nav-link waves-light" mdbWavesEffect routerLinkActive="active">FAQs</a></li>
+          <li class="nav-item"><a routerLink="photos" class="nav-link waves-light" mdbWavesEffect routerLinkActive="active">Picture Book</a></li>
+          <li class="nav-item"><a routerLink="events" class="nav-link waves-light" mdbWavesEffect routerLinkActive="active">Events</a></li>
+          <li class="nav-item"><a routerLink="links" class="nav-link waves-light" mdbWavesEffect routerLinkActive="active">Favourite Links</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="golden-box-flexi container-fluid bg-light text-dark">
+    <router-outlet></router-outlet>
+    <div class="dummy"></div>
+  </section>
+</section>

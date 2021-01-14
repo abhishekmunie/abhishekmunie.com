@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+// Bootstrap
+@import "~mdb-angular-ui-kit/assets/scss/bootstrap/functions";
+@import "~mdb-angular-ui-kit/assets/scss/bootstrap/variables";
+@import "~mdb-angular-ui-kit/assets/scss/bootstrap/mixins";
+
+// Your custom variables
+// $roboto-font-path: '~mdb-angular-ui-kit/assets/font/roboto/';
+// $image-path: '~mdb-angular-ui-kit/assets/img';
+
+$blue-base: #3e9ad2;
+$purple-base: #a27292;
+$red-base: #bd542a;
+$teal-base: #0c9895;
+
+$breadcrumb-divider: quote(">");
+
+// @import "~mdb-angular-ui-kit/assets/scss/custom-variables";
+// @import "~mdb-angular-ui-kit/assets/scss/free/colors";
+// @import "~mdb-angular-ui-kit/assets/scss/free/variables";
+// @import "~mdb-angular-ui-kit/assets/scss/free/global";
+// @import "~mdb-angular-ui-kit/assets/scss/free/helpers";
+// @import "~mdb-angular-ui-kit/assets/scss/free/typography";
+// @import "~mdb-angular-ui-kit/assets/scss/free/masks";
+// @import "~mdb-angular-ui-kit/assets/scss/free/waves";

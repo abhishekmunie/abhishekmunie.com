@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+@import "basic";
+
+body {
+  background: black
+}
+
+#home {
+  position: relative;
+  width: 100%;
+  display: block;
+  @include vendorize(box-shadow, inset 0 0 30em 1.5em #0C0F12);
+
+  canvas.background {
+    pointer-events: none;
+  }
+}
+
+.addthis_counter * {
+  -webkit-box-sizing: content-box;
+}
+
+.SnowFall {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+#emart {
+  @include vendorize(transition-duration, 5.99s);
+  margin-top: -99px;
+  margin-left: -69px;
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+}
+
+
+#pageHome {
+  margin: auto;
+  width: 100%;
+  background: rgba(180, 180, 180, 0.33);
+  @include vendorize(transition, opacity 4.99s linear);
+  opacity: 0;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+
+  &:hover {
+    background: white;
+  }
+}
+
+.startup #wahighlight {
+  -webkit-animation-name: pane_scaleOut;
+  -webkit-animation-duration: 4.9s;
+  -webkit-animation-timing-function: ease-out;
+}
+
+#wahighlight {
+  visibility: visible;
+}
+
+#pageHome {
+  opacity: 1;
+}
+
+body {
+  overflow: visible;
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  direction: ltr;
+  unicode-bidi: embed;
+  background-color: #f5f6f7;
+  background-attachment: fixed;
+  background-position: center top;
+  background-repeat: repeat;
+  color: #333;
+  font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Georgia, "Times New Roman", Verdana, sans-serif, Times, serif;
+  text-align: center;
+  min-width: 1000px;
+  min-height: 100%;
+}
+
+.loading body {
+  cursor: url("/img/icons/loading.png");
+}
+
+.rcContainer {
+  min-width: 990px;
+}
+
+.rcBlock {
+  max-width: 1600px;
+  min-width: 990px;
+}
+
+.nrcInnerBlock {
+  width: 930px;
+}
+
+.nrcOuterBlock {
+  width: 990px;
+}
+
+.outerBlocks {
+  display: inline-block;
+  clear: both;
+  text-align: center;
+  min-width: 100%;
+}
+
+.pageMainWrapper {
+  width: 81%;
+  max-width: 1600px;
+  min-height: 45em;
+  padding: 0 30px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.pageMain {
+  width: 100%;
+  @include vendorize(box-shadow, 0 0 30px 0px #2d2d2d);
+}
+
+.indentedList>li {
+  margin-left: 25px;
+}
+
+.rounded {
+  @include vendorize(border-radius, 4px);
+}
+
+.Page {
+  position: relative;
+  border: 1px solid #dfdfdf;
+  border-color: #e5e5e5 #dbdbdb #d2d2d2;
+  @include vendorize(border-radius, 4px);
+  @include vendorize(box-shadow, 0 1px 3px rgba(0, 0, 0, .35));
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition-delay: 0.20000000298023224s;
+  -webkit-transition-duration: 0.30000001192092896s;
+  -webkit-transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@media screen and (max-device-width:480px) {
+  .TopNavContainer {
+    position: fixed;
+  }
+}
+
+.SnowFall {
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+#MyContentContainer {
+  position: relative;
+  box-shadow: inset 0 0 300px 15px #0c0f12;
+  -moz-box-shadow: inset 0 0 300px 15px #0c0f12;
+  -webkit-box-shadow: inset 0 0 300px 15px #0c0f12;
+  -o-box-shadow: inset 0 0 300px 15px #0c0f12;
+  -khtml-box-shadow: inset 0 0 300px 15px #0c0f12;
+  -ms-box-shadow: inset 0 0 300px 15px #0c0f12;
+  width: 100%;
+  display: block;
+}
+
+.icloudBg {
+  background: url("#{$images_base_url}/bg/apple/bg_tile.jpg") repeat top left !important;
+}
+
+#pageHome {
+  margin: auto;
+  width: 100%;
+  background: rgba(180, 180, 180, 0.33);
+  -webkit-transition: opacity 4.99s linear;
+  -moz-transition: opacity 4.99s linear;
+  -khtml-transition: opacity 4.99s linear;
+  opacity: 0;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+}
+
+#pageHome:hover {
+  background: white;
+}
+
+#pageMain {
+  width: 100%;
+}
+
+#homePageSizeBox {
+  width: 100%;
+  overflow: hidden;
+}
+
+.artworkOverlay {
+  display: none;
+  height: 318px;
+  width: 259px;
+  position: absolute;
+  top: -60px;
+  right: 0;
+  z-index: 1;
+}
+/* Necessary for full page carousel*/
+
+html,
+body,
+.view {
+  height: 100vh;
+}
+
+/* Full Page Carousel itself*/
+
+.carousel {
+  height: 100vh;
+}
+
+.carousel .carousel-inner {
+  height: 100vh;
+}
+
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  height: 100vh;
+}
+
+img {
+  &.d-block {
+    height: 100vh;
+  }
+}
+
+.carousel-inner {
+  height: 100vh;
+}
+
+.carousel .carousel-inner .carousel-item,
+.carousel .carousel-inner .active {
+  height: 100vh;
+}
+
+img {
+  &.d-block {
+    height: 100vh;
+  }
+}

@@ -1,0 +1,65 @@
+<nav id="main-nav" role="navigation" class="navbar navbar-expand-lg navbar-light hover-shadow">
+  <!-- Container wrapper -->
+  <div class="container-fluid p-0">
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" (click)="rightAligned.toggle()" aria-controls="navbarRightAlign"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navbar brand -->
+    <a class="logo navbar-brand" routerLink="/"><strong>Abhishek Munie</strong></a>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarRightAlign" mdbCollapse #rightAligned="mdbCollapse">
+      <!-- Left links -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 lavalamp">
+        <li class="nav-item blue" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+          #menuHome="routerLinkActive" [attr.aria-current]="menuHome.isActive ? 'page' : undefined">
+          <a class="nav-link waves-light" mdbRippleRadius routerLink="/">
+            <fa-icon [icon]="faHome"></fa-icon>
+          </a>
+        </li>
+        <li class="nav-item red" routerLinkActive="active" #menuAbhishek="routerLinkActive"
+          [attr.aria-current]="menuAbhishek.isActive ? 'page' : undefined">
+          <a class="nav-link waves-light" mdbRippleRadius routerLink="/abhishek">Abhishek</a>
+        </li>
+        <li class="nav-item teal" routerLinkActive="active" #menuProjects="routerLinkActive"
+          [attr.aria-current]="menuProjects.isActive ? 'page' : undefined">
+          <a class="nav-link waves-light" mdbRippleRadius routerLink="/projects">Projects</a>
+        </li>
+        <li class="nav-item purple" routerLinkActive="active" #menuScience="routerLinkActive"
+          [attr.aria-current]="menuScience.isActive ? 'page' : undefined">
+          <a class="nav-link waves-light" mdbRippleRadius routerLink="/science">Science &amp;
+            Technology</a>
+        </li>
+        <li class="nav-item xmas" routerLinkActive="active" #menuConnect="routerLinkActive"
+          [attr.aria-current]="menuConnect.isActive ? 'page' : undefined">
+          <a class="nav-link waves-light" mdbRippleRadius routerLink="/connect">Connect</a>
+        </li>
+
+        <!-- Lavalamp Hover Pads -->
+        <li class="left-pad">&nbsp;</li>
+        <li class="hover-pad">&nbsp;</li>
+        <li class="right-pad">&nbsp;</li>
+        <!-- Lavalamp Hover Pads -->
+      </ul>
+
+      <!-- Search form -->
+      <form method="get" action="https://www.google.com/search" role="search"
+        class="d-flex input-group w-auto waves-light justify-content-center" mdbWavesEffect>
+        <input type="hidden" name="sitesearch" value="abhishekmunie.com" />
+        <input type="search" class="form-control" tabindex="0" name="as_q" placeholder="Search 🔎"
+          aria-label="Search" />
+        <!-- <label class="form-label" for="form1">Search</label> -->
+        <!-- <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+        </span> -->
+      </form>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+<mat-progress-bar *ngIf="loading" color="accent" mode="indeterminate"></mat-progress-bar>

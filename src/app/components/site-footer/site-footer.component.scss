@@ -1,0 +1,57 @@
+@import "basic";
+
+footer {
+  text-align: center;
+  padding: 0.9em 0 0 0;
+  margin-bottom: 0;
+  line-height: 100%;
+  .block {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+}
+
+.social {
+  a {
+    color: inherit;
+    margin: 0 2em 1em 0;
+
+    &:hover{
+      color: white;
+    }
+  }
+}
+
+.maclogo {
+  color: #777;
+  width: 12em;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: bolder;
+
+  div {
+    display: block;
+    margin-left: 43px;
+  }
+
+  &:hover {
+    color: #999;
+  }
+}
+
+.sponsor {
+  white-space: nowrap;
+  color: #777;
+  display: inline-block;
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bolder;
+
+  &:hover {
+    color: #999;
+    text-decoration: none;
+  }
+}

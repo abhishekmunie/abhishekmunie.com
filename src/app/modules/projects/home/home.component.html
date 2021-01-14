@@ -1,0 +1,49 @@
+<div class="container">
+  <section class="section extra-margins text-center my-5">
+
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold my-5">
+      <a href="https://github.com/abhishekmunie" target="_blank">My GitHub Repositories</a>
+    </h2>
+    <!-- Section description -->
+    <p class="dark-grey-text w-responsive mx-auto mb-5">Open Source</p>
+
+    <!-- Grid row -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" *ngFor="let repoRow of repoRows | async">
+      <!-- Grid column -->
+      <div class="col mb-3" *ngFor="let repo of repoRow">
+        <div class="card h-100">
+          <!-- Featured image -->
+          <!-- <div class="view overlay rounded z-depth-2 mb-4 waves-light" mdbWavesEffect>
+              <img class="img-fluid" src="{{ repo.owner.avatar_url }}" alt="Sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div> -->
+          <!--Excerpt-->
+
+          <h4 class="card-header font-weight-bold mb-3"><a href="{{ repo.homepage }}">{{ repo.name }}</a></h4>
+
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="pink-text">
+                <fa-icon [icon]="faGraduationCap"></fa-icon><strong> {{ repo.language }}</strong>
+              </a>
+            </h5>
+            <!-- <p class="card-text"> -->
+
+            <p>by <a href="{{ repo.owner.html_url }}"><strong>{{ repo.owner.login }}</strong></a></p>
+            <p><i class="fa fa-calendar"></i> {{ repo.updated_at }}</p>
+          </div>
+          <div class="card-footer text-muted" *ngIf="repo.description">
+            {{ repo.description }}
+            <!-- <a class="btn btn-deep-orange btn-rounded waves-light" mdbRippleRadius>Read more</a> -->
+          </div>
+        </div>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+
+  </section>
+</div>

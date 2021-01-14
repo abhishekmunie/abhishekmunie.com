@@ -1,0 +1,267 @@
+@import "basic";
+
+#main-nav {
+  background-size: cover;
+  border-style: none;
+  border-radius: 0;
+  font-family: 'Fredericka the Great', Roboto, "Helvetica Neue", sans-serif;
+
+  nav {
+    padding: 0 !important;
+  }
+
+  .navbar-brand {
+    text-align: center;
+    font-size: 1.8em;
+    padding: 0.3em 0 0.3em 1.5em;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-shadow: rgba(12, 15, 18, 0.15) 0 0 9px;
+  }
+
+
+  .form-control {
+    background-color: transparent;
+    border: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .navbar-brand {
+      color: #e0e0e0;
+    }
+    .form-control {
+      color: #eee;
+      &::placeholder {
+        color: #eee;
+        opacity: 0.7;
+        text-align: center;
+      }
+    }
+    .navbar-toggler {
+      color: #eee;
+      border-color: #eee;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    .navbar-brand {
+      color: black;
+    }
+    .form-control {
+      color: black;
+      &::placeholder {
+        color: black;
+        opacity: 0.7;
+        text-align: center;
+      }
+    }
+  }
+
+  > .container-fluid {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+nav {
+  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  nav {
+    background-color: #000;
+    color: #eee;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  nav {
+    background-color: #F5F6F7;
+    color: #333;
+  }
+}
+
+
+@include media-breakpoint-down(lg) {
+  .navbar-brand {
+    padding-left: 0.2em;
+    padding-right: 0.1em;
+  }
+
+  .nav {
+    > li.hover-pad {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+}
+
+// Lavalamp
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.lavalamp {
+  position: relative;
+  overflow: hidden;
+  zoom: 1;
+
+  li {
+    list-style: none outside;
+    position: relative;
+    float: left;
+  }
+
+  li a {
+    position: relative;
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 100;
+
+    @include vendorize(transition-property, color, font-weight);
+    @include vendorize(transition-duration, .5s);
+  }
+
+  li.active a {
+    color: #eee;
+  }
+
+  li:hover a {
+    color: #eeea !important;
+    font-weight: 500;
+  }
+
+  .left-pad,
+  .right-pad,
+  .hover-pad {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    text-indent: -9999em;
+    pointer-events: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    li a.nav-link {
+      color: #eee;
+    }
+
+    &:hover li.active a {
+      color: #eee;
+    }
+
+    &:hover li:hover.active a {
+      color: #eee;
+    }
+
+    .left-pad,
+    .right-pad {
+      background-color: #000;
+      color: #eee;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    li a.nav-link {
+      color: black;
+    }
+
+    &:hover li.active a {
+      color: black;
+    }
+
+    &:hover li:hover.active a {
+      color: #eee;
+    }
+
+    .left-pad,
+    .right-pad {
+      background-color: #F5F6F7;
+      color: #333;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .left-pad,
+    .right-pad,
+    .hover-pad {
+      height: 100%;
+    }
+
+    .left-pad {
+      @include vendorize(transition-property, width);
+      @include vendorize(transition-duration, .5s);
+    }
+    .hover-pad {
+      @include vendorize(filter, blur(1.5px));
+      @include vendorize(transition-property, left, width);
+      @include vendorize(transition-duration, .5s);
+      @include vendorize(border-image, url('#{$images_base_url}/overlays/toolbarItemSelected.png') 0 2 0 2);
+    }
+    .right-pad {
+      right: 0;
+      @include vendorize(transition-property, left);
+      @include vendorize(transition-duration, .5s);
+    }
+
+    $nav-item-widths: 3em, 7em, 7em, 15em, 6.6em;
+
+    $aw: 0;
+    @for $i from 1 through length($nav-item-widths) {
+      $w: nth($nav-item-widths, $i);
+
+      li.nav-item:nth-of-type(#{$i}) { width: $w; }
+      li:nth-of-type(#{$i}).active ~ li.left-pad { width: $aw; }
+      li:nth-of-type(#{$i}).active ~ li.hover-pad { left: $aw; width: $aw + $w; }
+      li:nth-of-type(#{$i}).active ~ li.right-pad { left: $aw + $w; }
+
+      $aw: $aw + $w
+    }
+    li.nav-item:last-of-type { padding-right: 0 !important; }
+
+    $aw: 0;
+    @for $i from 1 through length($nav-item-widths) {
+      $w: nth($nav-item-widths, $i);
+
+      li:nth-of-type(#{$i}):hover ~ li.left-pad { width: $aw; }
+      li:nth-of-type(#{$i}):hover ~ li.hover-pad { left: $aw; width: $aw + $w; }
+      li:nth-of-type(#{$i}):hover ~ li.right-pad { left: $aw + $w; }
+
+      $aw: $aw + $w
+    }
+  }
+}
+
+
+// Color scheme
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+nav .blue {
+  background-color: #3e9ad2 !important;
+}
+
+nav .darkOrange {
+  background-color: #b38e01 !important;
+}
+
+nav .purple {
+  background-color: #a27292 !important;
+}
+
+nav .red {
+  background-color: #bd542a  !important;
+}
+
+nav .teal {
+  background-color: #0c9895 !important;
+}
+
+nav .xmas {
+  background-color: #076e48 !important;
+}

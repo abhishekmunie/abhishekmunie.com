@@ -1,0 +1,21 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  Site Administrator: Abhishek Munie
+  Site: http://abhishekmunie.com
+  Contact: admin [at] abhishekmunie.com
+  Twitter: @abhishekmunie
+  Location: Earth
+
+/* THANKS */
+  Names (& URL):
+
+/* SITE */
+  Last update: 2021/01/14
+  Language: English
+  Doctype: HTML5
+  IDE: VS Code
+  Standards: HTML5, CSS3, ECMAScript6
+  Components: Angular
+  Software: Cloudflare Workers

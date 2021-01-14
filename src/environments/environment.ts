@@ -3,7 +3,19 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  appId: 'abhishekmunie-nightly',
+  site: {
+    name: 'Abhishek Munie',
+    title: 'Abhishek Munie\'s Official Nightly Website',
+    home: 'https://nightly.abhishekmunie.com',
+    author: {
+      name: 'Abhishek Munie',
+      email: 'contact@abhishekmunie.com',
+      github: 'abhishekmunie',
+      twitter: 'abhishekmunie'
+    }
+  },
 };
 
 /*

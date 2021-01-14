@@ -1,0 +1,62 @@
+#abhishek {
+  width: 100%;
+  max-width: 108em;
+  margin: 0 auto;
+}
+
+.am-nav-section {
+  background-color: #f1ede1;
+  // height: 244px;
+
+  >div{
+    padding: 0;
+  }
+
+  .am-message {
+    padding: 2em;
+  }
+
+  nav {
+    padding: 0;
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      padding: 0;
+    }
+
+    figcaption {
+      padding: 0;
+      bottom: 0;
+
+      strong {
+        color: #bd542a;
+        text-transform: uppercase;
+        padding: 1em;
+      }
+    }
+
+    a.active strong {
+      color: black;
+    }
+  }
+
+  figure {
+    margin: 0;
+  }
+}
+
+.navbar {
+  background-color: #bd542a;
+  font-size: 1.5em;
+
+  .navbar-nav {
+    text-transform: uppercase;
+  }
+
+  a.active {
+    color: #f1ede1;
+  }
+}

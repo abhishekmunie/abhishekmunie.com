@@ -5,6 +5,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { MdbModule } from 'mdb-angular-ui-kit';
+
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,11 +19,14 @@ import { SiteFooterComponent } from './components/site-footer/site-footer.compon
 
 // Routing Components
 import { HomeComponent } from './home/home.component';
-import { MdbModule } from 'mdb-angular-ui-kit';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainNavComponent,
+    BreadcrumbComponent,
+    SiteFooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: environment.appId }),
