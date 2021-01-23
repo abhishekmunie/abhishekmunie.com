@@ -1,20 +1,35 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Components
+import { MainNavComponent } from './components/main-nav/main-nav.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { SiteFooterComponent } from './components/site-footer/site-footer.component';
+
+// Routing Components
+import { HomeComponent } from './home/home.component';
+import { MdbModule } from 'mdb-angular-ui-kit';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: environment.appId }),
     AppRoutingModule,
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+    MdbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
