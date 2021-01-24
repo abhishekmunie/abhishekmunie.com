@@ -44,3 +44,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# project specific
+
+# imagemin
+src/assets/webp
+scripts/*.js
