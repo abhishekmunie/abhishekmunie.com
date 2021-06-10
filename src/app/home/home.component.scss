@@ -174,10 +174,6 @@ body {
   display: block;
 }
 
-.icloudBg {
-  background: url("#{$images_base_url}/bg/apple/bg_tile.jpg") repeat top left !important;
-}
-
 #pageHome {
   margin: auto;
   width: 100%;
@@ -214,6 +210,7 @@ body {
   right: 0;
   z-index: 1;
 }
+
 /* Necessary for full page carousel*/
 
 html,
