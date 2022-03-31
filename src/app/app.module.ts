@@ -5,7 +5,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { MdbModule } from 'mdb-angular-ui-kit';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 
 import { environment } from '../environments/environment';
 
@@ -34,7 +34,7 @@ import { HomeComponent } from './home/home.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MatProgressBarModule,
-    MdbModule
+    MdbCollapseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

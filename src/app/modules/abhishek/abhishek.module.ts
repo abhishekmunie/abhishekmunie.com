@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { MdbModule } from 'mdb-angular-ui-kit';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 
 import { AbhishekRoutingModule } from './abhishek-routing.module';
 import { AbhishekComponent } from './abhishek.component';
@@ -28,7 +28,7 @@ import { PhotosComponent } from './photos/photos.component';
     CommonModule,
     FontAwesomeModule,
     AbhishekRoutingModule,
-    MdbModule
+    MdbCollapseModule,
   ],
   providers: [],
   bootstrap: [AbhishekComponent]
